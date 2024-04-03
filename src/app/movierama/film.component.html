@@ -1,0 +1,63 @@
+<div class="container">
+  <div *ngIf="response == null" class="text-center m-3">
+    <h4>Forrest Gump</h4>
+  </div>
+  <div *ngIf="response == false" class="text-center m-3">
+    <h4>Pas de film trouvé pour "{{ title }}" ... &#128533;</h4>
+  </div>
+  <div *ngIf="response == true" id="list" name="list" class="">
+
+      <div *ngFor="let movie of movies" class="container m-3 p-3 border border-dark border-5" style="border-radius: 30px;">
+        <div class="row">
+          <div class="col-3" style="max-width : 200px;">
+
+            <img *ngIf="movie.Poster == 'N/A'" src="assets/img/No-Image-Placeholder.svg" class="mw-50 img-thumbnail" alt="...">
+
+            <a *ngIf="movie.Poster != 'N/A'" href={{ movie.Poster }}><img src={{ movie.Poster }} class="img img-thumbnail" alt="..."></a>
+
+            <p class="text-center m-3">
+              <!-- <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{{ movie.imdbID }}" aria-expanded="false" aria-controls="collapseExample"> -->
+                <!-- <button class="btn btn-dark" type="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">
+                Plus
+              </button> -->
+            </p>
+          </div>
+          <div class="text-center col-9">
+            <h4 class="mb-3">{{ movie.Title }}</h4>
+            <b>Date de sortie : </b>{{ movie.Released | date}}
+            <br>
+            <b>Durée : </b>{{ movie.Runtime }}
+            <br>
+            <b>Genre : </b>{{ movie.Genre }}
+            <br>
+            <b>Synopsis EN : </b>{{ movie.Plot }}
+            <br>
+            <!-- <b>Synopsis FR : </b>{{ movie.SynopsisFR }}
+            <br> -->
+            <b>Note : </b>{{ movie.imdbRating }}/10 pour {{ movie.imdbVotes }} vote(s) sur Imdb
+            <br>
+            <div class="collapse" id="collapseExample{{ movie.imdbID }}">
+              <b>Classification : </b>{{ movie.Rated }}
+              <br>
+              <b>Producteur : </b>{{ movie.Director }}
+              <br>
+              <b>Scénariste : </b>{{ movie.Writer }}
+              <br>
+              <b>Acteurs : </b>{{ movie.Actors }}
+              <br>
+              <b>Language : </b>{{ movie.Language }}
+              <br>
+              <b>Pays : </b>{{ movie.Country }}
+              <br>
+              <b>Awards : </b>{{ movie.Awards }}
+              <br>
+              <b>Sortie DVD : </b>{{ movie.DVD }}
+              <br>
+              <b>BoxOffice : </b>{{ movie.BoxOffice }}
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

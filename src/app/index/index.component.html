@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+      <mat-card class="card" *ngFor="let card of cards;" >
+        <mat-card-header>
+          <mat-card-title>{{card.title}}</mat-card-title>
+        </mat-card-header>
+        <a href={{card.href}}>
+          <img class="" mat-card-image src={{card.img}} alt="">
+        </a>
+        <mat-card-content>
+          <p>
+            {{card.description}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+
+<div class="container text-center">
+  <div class="m-3">
+    <h1>Movierama</h1>
+  </div>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center m-3 p-3 border border-dark border-4" style="border-style: solid; border-radius: 20px;">
+      <div class="row">
+        <h5>Saisir un titre de film afin d'en avoir les détails</h5>
+        <p>(L'API opensource n'accepte que les titres en anglais)</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="m-3 input-group my-3 col-3">
+    <form #myForm="ngForm" (ngSubmit)="search(input.value)" class="input-group my-3 col-3">
+      <input #input id="movie" name="movie" type="search" class="form-control" placeholder="Titre..." aria-label="Search">
+      <button class="btn btn-dark" type="button" (click)="search(input.value)">Chercher</button>
+    </form>
+  </div>
+</div>
+<div id="htmlContent"></div>
+<app-card [response]="response" [title]="title" [movies]="movies" ></app-card>

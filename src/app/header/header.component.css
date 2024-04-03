@@ -1,0 +1,24 @@
+.toolbar {
+  height: auto;
+  background-color: black;
+  color: white;
+}
+.toolbar-header {
+  color: white;
+}
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  color: var(--btn-txt-color);
+  background-color: var(--btn-bg-color);
+}
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+.toolbar-little-spacer {
+  flex: 0.015 1 auto;
+}
+.toolbar-header {
+  color: white;
+}

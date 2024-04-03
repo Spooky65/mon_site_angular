@@ -1,0 +1,26 @@
+.card {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 400px;
+  border-radius: 1rem;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    rotate 0.5s;
+}
+.card:hover {
+  background-color: black;
+  color: white;
+  rotate: 360deg;
+}
+mat-grid-tile {
+  border-radius: 1rem;
+}
+mat-card img{
+  padding: 10px;
+  object-fit: cover; /*this makes the image in src fit to the size specified below*/
+  width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 300px;
+  border-radius: 1rem;
+}

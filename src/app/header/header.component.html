@@ -1,0 +1,21 @@
+<mat-toolbar class="toolbar bg-dark">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button [routerLink]="''" mat-menu-item>Index</button>
+    <button [routerLink]="'cv'" mat-menu-item>CV</button>
+    <button [routerLink]="'pixel'" mat-menu-item>Pixel Idle</button>
+    <button [routerLink]="'movierama'" mat-menu-item>Movierama API</button>
+    <button [routerLink]="'timer'" mat-menu-item>Web Timer</button>
+  </mat-menu>
+    <span class="toolbar-little-spacer"></span>
+    <a href="/">
+      <img id="miniature" class="rounded img-thumbnail bg-dark" style="width : 100px" src="../../assets/img/index_miniature.jpg" alt="Nicolas Diot">
+    </a>
+    <span class="toolbar-little-spacer"></span>
+    <button type="button" class="btn btn-warning">
+      <span>Nicolas Diot</span>
+    </button>
+    <span class="toolbar-spacer"></span>
+    <mat-slide-toggle (click)="toggleSlideDarkTheme()" class="toolbar-header">Dark mode</mat-slide-toggle>
+</mat-toolbar>
+  
