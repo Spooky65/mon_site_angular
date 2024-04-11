@@ -4,7 +4,7 @@
         <mat-card-header>
           <mat-card-title>{{card.title}}</mat-card-title>
         </mat-card-header>
-        <a href={{card.href}}>
+        <a [routerLink]="card.href">
           <img class="" mat-card-image src={{card.img}} alt="">
         </a>
         <mat-card-content>

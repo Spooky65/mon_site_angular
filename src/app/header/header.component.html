@@ -1,5 +1,5 @@
 <mat-toolbar class="toolbar bg-dark">
-  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <button class="btnheader" [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
     <button [routerLink]="''" mat-menu-item>Index</button>
     <button [routerLink]="'cv'" mat-menu-item>CV</button>
@@ -8,14 +8,17 @@
     <button [routerLink]="'timer'" mat-menu-item>Web Timer</button>
   </mat-menu>
     <span class="toolbar-little-spacer"></span>
-    <a href="/">
+    <a [routerLink]="'/'">
       <img id="miniature" class="rounded img-thumbnail bg-dark" style="width : 100px" src="../../assets/img/index_miniature.jpg" alt="Nicolas Diot">
     </a>
     <span class="toolbar-little-spacer"></span>
-    <button type="button" class="btn btn-warning">
+    <button type="button" class="btnheader btn btn-warning">
       <span>Nicolas Diot</span>
     </button>
     <span class="toolbar-spacer"></span>
-    <mat-slide-toggle (click)="toggleSlideDarkTheme()" class="toolbar-header">Dark mode</mat-slide-toggle>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+    <span>Dark mode</span>
 </mat-toolbar>
-  
